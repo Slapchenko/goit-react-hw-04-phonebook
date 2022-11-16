@@ -38,12 +38,10 @@ export function App() {
 
   const handleChange = e => setFilter(e.target.value);
 
-  const visibleContacts = () => {
-    const normalizedFilter = filter.toLowerCase();
-    return contacts.filter(contact =>
-      contact.name.toLowerCase().includes(normalizedFilter)
+  const visibleContacts = () =>
+    contacts.filter(contact =>
+      contact.name.toLowerCase().includes(filter.toLowerCase())
     );
-  };
 
   return (
     <>
